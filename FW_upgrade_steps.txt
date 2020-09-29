@@ -1,0 +1,17 @@
+FW upgrade:
+
+1) follow the guide
+https://mangoh.io/uploaded-documents/Reference/mangOH%20Red/Discover/Getting%20Started/mangOH_Red_GSG_nonOctave.pdf
+
+2) Download the .spk file from Instructions for Legato CLI users
+ (Linux)
+
+https://source.sierrawireless.com/resources/airprime/software/wp76xx/wp76xx-firmware-release-12/#sthash.7Se8EdEA.Bi9BpSXz.dpbs
+
+Locate the firmware .spk file that is to be installed and copy it to the mangOH
+3) $ scp <spk_file_path> root@192.168.2.2:/tmp
+Log in to the mangOH:
+4) $ ssh root@192.168.2.2
+Install the firmware update:
+# fwupdate download /tmp/<spk_file>
+5) Press the reset button to restart the device. The device will boot with the new firmware
